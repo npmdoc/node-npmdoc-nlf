@@ -1,0 +1,1337 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/iandotkelly/nlf"
+
+    >nlf (v1.4.3)</a>
+</h1>
+<h4>Find licenses for a node application and its node_module dependencies</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nlf">module nlf</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.FileSource">
+            function <span class="apidocSignatureSpan">nlf.</span>FileSource
+            <span class="apidocSignatureSpan">(filePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.LicenseCollection">
+            function <span class="apidocSignatureSpan">nlf.</span>LicenseCollection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.Module">
+            function <span class="apidocSignatureSpan">nlf.</span>Module
+            <span class="apidocSignatureSpan">(id, name, version, directory, repository, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.PackageSource">
+            function <span class="apidocSignatureSpan">nlf.</span>PackageSource
+            <span class="apidocSignatureSpan">(licenseProperty)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.find">
+            function <span class="apidocSignatureSpan">nlf.</span>find
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.licenseFind">
+            function <span class="apidocSignatureSpan">nlf.</span>licenseFind
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan"></span>nlf</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nlf.</span>FileSource.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nlf.</span>LicenseCollection.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nlf.</span>Module.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nlf.</span>PackageSource.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nlf.</span>csvFormatter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nlf.</span>standardFormatter</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nlf.FileSource">module nlf.FileSource</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.FileSource.FileSource">
+            function <span class="apidocSignatureSpan">nlf.</span>FileSource
+            <span class="apidocSignatureSpan">(filePath)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nlf.FileSource.prototype">module nlf.FileSource.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.FileSource.prototype.names">
+            function <span class="apidocSignatureSpan">nlf.FileSource.prototype.</span>names
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.FileSource.prototype.read">
+            function <span class="apidocSignatureSpan">nlf.FileSource.prototype.</span>read
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nlf.LicenseCollection">module nlf.LicenseCollection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.LicenseCollection.LicenseCollection">
+            function <span class="apidocSignatureSpan">nlf.</span>LicenseCollection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nlf.LicenseCollection.prototype">module nlf.LicenseCollection.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.LicenseCollection.prototype.add">
+            function <span class="apidocSignatureSpan">nlf.LicenseCollection.prototype.</span>add
+            <span class="apidocSignatureSpan">(source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.LicenseCollection.prototype.summary">
+            function <span class="apidocSignatureSpan">nlf.LicenseCollection.prototype.</span>summary
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nlf.Module">module nlf.Module</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.Module.Module">
+            function <span class="apidocSignatureSpan">nlf.</span>Module
+            <span class="apidocSignatureSpan">(id, name, version, directory, repository, type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nlf.Module.prototype">module nlf.Module.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.Module.prototype.summary">
+            function <span class="apidocSignatureSpan">nlf.Module.prototype.</span>summary
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nlf.PackageSource">module nlf.PackageSource</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.PackageSource.PackageSource">
+            function <span class="apidocSignatureSpan">nlf.</span>PackageSource
+            <span class="apidocSignatureSpan">(licenseProperty)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nlf.PackageSource.prototype">module nlf.PackageSource.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.PackageSource.prototype.names">
+            function <span class="apidocSignatureSpan">nlf.PackageSource.prototype.</span>names
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nlf.csvFormatter">module nlf.csvFormatter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.csvFormatter.render">
+            function <span class="apidocSignatureSpan">nlf.csvFormatter.</span>render
+            <span class="apidocSignatureSpan">(licenseData, options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nlf.nlf">module nlf.nlf</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.nlf.FileSource">
+            function <span class="apidocSignatureSpan">nlf.nlf.</span>FileSource
+            <span class="apidocSignatureSpan">(filePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.nlf.LicenseCollection">
+            function <span class="apidocSignatureSpan">nlf.nlf.</span>LicenseCollection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.nlf.Module">
+            function <span class="apidocSignatureSpan">nlf.nlf.</span>Module
+            <span class="apidocSignatureSpan">(id, name, version, directory, repository, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.nlf.PackageSource">
+            function <span class="apidocSignatureSpan">nlf.nlf.</span>PackageSource
+            <span class="apidocSignatureSpan">(licenseProperty)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.nlf.find">
+            function <span class="apidocSignatureSpan">nlf.nlf.</span>find
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.nlf.licenseFind">
+            function <span class="apidocSignatureSpan">nlf.nlf.</span>licenseFind
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nlf.nlf.</span>csvFormatter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nlf.nlf.</span>standardFormatter</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nlf.standardFormatter">module nlf.standardFormatter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nlf.standardFormatter.render">
+            function <span class="apidocSignatureSpan">nlf.standardFormatter.</span>render
+            <span class="apidocSignatureSpan">(licenseData, options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nlf" id="apidoc.module.nlf">module nlf</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.FileSource" id="apidoc.element.nlf.FileSource">
+        function <span class="apidocSignatureSpan">nlf.</span>FileSource
+        <span class="apidocSignatureSpan">(filePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileSource(filePath) {
+
+	if (typeof filePath !== &#x27;string&#x27;) {
+		throw new Error(&#x27;filePath must be a string&#x27;);
+	}
+
+	this.filePath = filePath;
+	this.text = &#x27;&#x27;;
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.LicenseCollection" id="apidoc.element.nlf.LicenseCollection">
+        function <span class="apidocSignatureSpan">nlf.</span>LicenseCollection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LicenseCollection() {
+
+	this.sources = [];
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.Module" id="apidoc.element.nlf.Module">
+        function <span class="apidocSignatureSpan">nlf.</span>Module
+        <span class="apidocSignatureSpan">(id, name, version, directory, repository, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Module(id, name, version, directory, repository, type) {
+
+	if (!id) {
+		throw new Error(&#x27;id must be defined&#x27;);
+	}
+
+	if (!directory) {
+		throw new Error(&#x27;directory must be defined&#x27;);
+	}
+
+	this.id = id;
+	this.name = name;
+	this.version = version;
+	this.repository = (repository || &#x27;(none)&#x27;)
+		.replace(&#x27;git://&#x27;, &#x27;http://&#x27;)
+		.replace(&#x27;.git&#x27;, &#x27;&#x27;)
+		.replace(/^git\+/, &#x27;&#x27;);
+	this.directory = directory;
+	this.type = type || &#x27;(none)&#x27;;
+
+	this.licenseSources = {
+		&#x27;package&#x27;: new LicenseCollection(),
+		&#x27;license&#x27;: new LicenseCollection(),
+		&#x27;readme&#x27;: new LicenseCollection()
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.PackageSource" id="apidoc.element.nlf.PackageSource">
+        function <span class="apidocSignatureSpan">nlf.</span>PackageSource
+        <span class="apidocSignatureSpan">(licenseProperty)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PackageSource(licenseProperty) {
+
+	switch (typeof licenseProperty) {
+	case &#x27;string&#x27;:
+		this.license = licenseProperty;
+		this.url = &#x27;(none)&#x27;;
+		break;
+	case &#x27;object&#x27;:
+		this.license = licenseProperty.type;
+		this.url = licenseProperty.url;
+		break;
+	default:
+		throw new Error(&#x27;licenseProperty must be a string or an object&#x27;);
+	}
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.find" id="apidoc.element.nlf.find">
+        function <span class="apidocSignatureSpan">nlf.</span>find
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function find(options, callback) {
+
+	// process arguments
+	if (typeof options === &#x27;function&#x27; &#x26;&#x26; callback === undefined) {
+		callback = options;
+		options = undefined;
+	}
+
+	try {
+		options = processOptions(options);
+	} catch (err) {
+		return callback(err);
+	}
+
+	<span class="apidocCodeCommentSpan">/**
+	 * Function called when readInstalled hits an issue
+	 *
+	 * @param  {String} output The error message
+	 * @param  {String} details The error details
+	 */
+</span>	function log(output, details) {
+		console.error(&#x27;Error in reading node_module dependencies, error was:&#x27;,
+			output, details);
+	}
+
+	if (!fileExistsSync(path.join(options.directory, &#x27;package.json&#x27;))) {
+		return callback(new Error(&#x27;No package.json file found.&#x27;));
+	}
+
+	// use npm read-installed module to search out all the node modules
+	readInstalled(options.directory, {
+		log: log,
+		depth: options.depth
+	}, function (err, data) {
+
+		if (err) {
+			console.error(&#x27;Serious problem reading node_module dependencies&#x27;);
+			return callback(err);
+		}
+
+		// parse the read-installed data
+		parseInstalled(data, options, function (err, output) {
+
+			if (err) {
+				return callback(err);
+			}
+
+			// return the output
+			callback(null, convertToArray(output));
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Programmatically
+
+```javascript
+var nlf = require(&#x27;nlf&#x27;);
+
+nlf.<span class="apidocCodeKeywordSpan">find</span>({ directory: &#x27;/User/me/my-project&#x27; }, function (err, data) {
+	// do something with the response object.
+	console.log(JSON.stringify(data));
+});
+
+// to only include production dependencies
+nlf.find({
+	directory: &#x27;/User/me/my-project&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.licenseFind" id="apidoc.element.nlf.licenseFind">
+        function <span class="apidocSignatureSpan">nlf.</span>licenseFind
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identifyLicense(text) {
+	var licenseIndex,
+		regexIndex,
+		pattern,
+		output = [];
+
+	// ignore files that have the ignore flag - e.g. the nfl project itself
+	if (!excludePattern.test(text)) {
+		for (licenseIndex = patterns.length - 1; licenseIndex &#x3e;= 0; licenseIndex--) {
+			pattern = patterns[licenseIndex];
+			for (regexIndex = pattern.regex.length - 1; regexIndex &#x3e;= 0; regexIndex--) {
+				if (pattern.regex[regexIndex].test(text)) {
+					output.push(pattern.name);
+					break;
+				}
+			}
+		}
+	}
+
+	return output.sort();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nlf.FileSource" id="apidoc.module.nlf.FileSource">module nlf.FileSource</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.FileSource.FileSource" id="apidoc.element.nlf.FileSource.FileSource">
+        function <span class="apidocSignatureSpan">nlf.</span>FileSource
+        <span class="apidocSignatureSpan">(filePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileSource(filePath) {
+
+	if (typeof filePath !== &#x27;string&#x27;) {
+		throw new Error(&#x27;filePath must be a string&#x27;);
+	}
+
+	this.filePath = filePath;
+	this.text = &#x27;&#x27;;
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nlf.FileSource.prototype" id="apidoc.module.nlf.FileSource.prototype">module nlf.FileSource.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.FileSource.prototype.names" id="apidoc.element.nlf.FileSource.prototype.names">
+        function <span class="apidocSignatureSpan">nlf.FileSource.prototype.</span>names
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">names = function () {
+
+	return licenseFind(this.text);
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.FileSource.prototype.read" id="apidoc.element.nlf.FileSource.prototype.read">
+        function <span class="apidocSignatureSpan">nlf.FileSource.prototype.</span>read
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (callback) {
+
+	var self = this;
+
+	fs.readFile(this.filePath, &#x27;utf-8&#x27;, function (err, data) {
+		if (err) {
+			return callback(err);
+		}
+
+		self.text = data;
+		callback(null);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+
+	// iterate over all the file paths
+	for (fileIndex = 0; fileIndex &#x3c; filePaths.length; fileIndex++) {
+		source = new FileSource(filePaths[fileIndex]);
+		collection.add(source);
+		// read the files
+		source.<span class="apidocCodeKeywordSpan">read</span>(checkDone);
+	}
+}
+
+/**
+* Add licenses from package.json file
+*
+* @param {Object} moduleData The package.json data
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nlf.LicenseCollection" id="apidoc.module.nlf.LicenseCollection">module nlf.LicenseCollection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.LicenseCollection.LicenseCollection" id="apidoc.element.nlf.LicenseCollection.LicenseCollection">
+        function <span class="apidocSignatureSpan">nlf.</span>LicenseCollection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LicenseCollection() {
+
+	this.sources = [];
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nlf.LicenseCollection.prototype" id="apidoc.module.nlf.LicenseCollection.prototype">module nlf.LicenseCollection.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.LicenseCollection.prototype.add" id="apidoc.element.nlf.LicenseCollection.prototype.add">
+        function <span class="apidocSignatureSpan">nlf.LicenseCollection.prototype.</span>add
+        <span class="apidocSignatureSpan">(source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (source) {
+
+	if (typeof source !== &#x27;object&#x27;) {
+		throw new Error(&#x27;source must be an object&#x27;);
+	}
+
+	this.sources.push(source);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			callback(null);
+		}
+	}
+
+	// iterate over all the file paths
+	for (fileIndex = 0; fileIndex &#x3c; filePaths.length; fileIndex++) {
+		source = new FileSource(filePaths[fileIndex]);
+		collection.<span class="apidocCodeKeywordSpan">add</span>(source);
+		// read the files
+		source.read(checkDone);
+	}
+}
+
+/**
+* Add licenses from package.json file
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.LicenseCollection.prototype.summary" id="apidoc.element.nlf.LicenseCollection.prototype.summary">
+        function <span class="apidocSignatureSpan">nlf.LicenseCollection.prototype.</span>summary
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">summary = function () {
+
+	var dedup = {},
+		output = [],
+		names,
+		name,
+		nameIndex,
+		sourceIndex;
+
+	for (sourceIndex = 0; sourceIndex &#x3c; this.sources.length; sourceIndex++) {
+		names = this.sources[sourceIndex].names();
+		for (nameIndex = 0; nameIndex &#x3c; names.length; nameIndex++) {
+			name = names[nameIndex];
+			if (!dedup.hasOwnProperty(name)) {
+				dedup[name] = null;
+			}
+		}
+	}
+
+	// convert back to an array
+	for (name in dedup) {
+		if (dedup.hasOwnProperty(name)) {
+			output.push(name);
+		}
+	}
+
+	return output.sort();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nlf.Module" id="apidoc.module.nlf.Module">module nlf.Module</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.Module.Module" id="apidoc.element.nlf.Module.Module">
+        function <span class="apidocSignatureSpan">nlf.</span>Module
+        <span class="apidocSignatureSpan">(id, name, version, directory, repository, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Module(id, name, version, directory, repository, type) {
+
+	if (!id) {
+		throw new Error(&#x27;id must be defined&#x27;);
+	}
+
+	if (!directory) {
+		throw new Error(&#x27;directory must be defined&#x27;);
+	}
+
+	this.id = id;
+	this.name = name;
+	this.version = version;
+	this.repository = (repository || &#x27;(none)&#x27;)
+		.replace(&#x27;git://&#x27;, &#x27;http://&#x27;)
+		.replace(&#x27;.git&#x27;, &#x27;&#x27;)
+		.replace(/^git\+/, &#x27;&#x27;);
+	this.directory = directory;
+	this.type = type || &#x27;(none)&#x27;;
+
+	this.licenseSources = {
+		&#x27;package&#x27;: new LicenseCollection(),
+		&#x27;license&#x27;: new LicenseCollection(),
+		&#x27;readme&#x27;: new LicenseCollection()
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nlf.Module.prototype" id="apidoc.module.nlf.Module.prototype">module nlf.Module.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.Module.prototype.summary" id="apidoc.element.nlf.Module.prototype.summary">
+        function <span class="apidocSignatureSpan">nlf.Module.prototype.</span>summary
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">summary = function () {
+
+	var dedupe = {},
+		licenseSourceName,
+		index,
+		output = [],
+		licenseName,
+		all = [];
+
+	// concatenate all the different license source collections
+	for (licenseSourceName in this.licenseSources) {
+		if (this.licenseSources.hasOwnProperty(licenseSourceName)) {
+			all = all.concat(this.licenseSources[licenseSourceName].summary());
+		}
+	}
+
+	// deduplicate this list
+	for (index = all.length - 1; index &#x3e;= 0; index--) {
+		licenseName = all[index];
+		if (!dedupe.hasOwnProperty(licenseName)) {
+			dedupe[licenseName] = null;
+		}
+	}
+
+	// convert back to an array
+	for (licenseName in dedupe) {
+		if (dedupe.hasOwnProperty(licenseName)) {
+			output.push(licenseName);
+		}
+	}
+
+	// add unknown, if there are none
+	if (output.length === 0) {
+		output.push(&#x27;Unknown&#x27;);
+	}
+
+	return output.sort();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nlf.PackageSource" id="apidoc.module.nlf.PackageSource">module nlf.PackageSource</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.PackageSource.PackageSource" id="apidoc.element.nlf.PackageSource.PackageSource">
+        function <span class="apidocSignatureSpan">nlf.</span>PackageSource
+        <span class="apidocSignatureSpan">(licenseProperty)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PackageSource(licenseProperty) {
+
+	switch (typeof licenseProperty) {
+	case &#x27;string&#x27;:
+		this.license = licenseProperty;
+		this.url = &#x27;(none)&#x27;;
+		break;
+	case &#x27;object&#x27;:
+		this.license = licenseProperty.type;
+		this.url = licenseProperty.url;
+		break;
+	default:
+		throw new Error(&#x27;licenseProperty must be a string or an object&#x27;);
+	}
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nlf.PackageSource.prototype" id="apidoc.module.nlf.PackageSource.prototype">module nlf.PackageSource.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.PackageSource.prototype.names" id="apidoc.element.nlf.PackageSource.prototype.names">
+        function <span class="apidocSignatureSpan">nlf.PackageSource.prototype.</span>names
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">names = function () {
+
+	return [ this.license ];
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nlf.csvFormatter" id="apidoc.module.nlf.csvFormatter">module nlf.csvFormatter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.csvFormatter.render" id="apidoc.element.nlf.csvFormatter.render">
+        function <span class="apidocSignatureSpan">nlf.csvFormatter.</span>render
+        <span class="apidocSignatureSpan">(licenseData, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function render(licenseData, options, callback) {
+
+	if (typeof callback !== &#x27;function&#x27;) {
+		throw new Error(&#x27;must have a callback&#x27;);
+	}
+
+	if (!Array.isArray(licenseData)) {
+		return callback(new Error(&#x27;licenseData must be an array&#x27;));
+	}
+
+	if (licenseData.length &#x3c; 1) {
+		return callback(new Error(&#x27;must have at least one module in data&#x27;));
+	}
+
+	var output = [];
+
+	output.push(heading);
+
+	licenseData.forEach(function (module) {
+		output.push(recordToCsv(module));
+	});
+
+	callback(null, output.join(&#x27;\n&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	if (err) {
+		console.error(err);
+		process.exit(1);
+	}
+
+	if (data &#x26;&#x26; data.length &#x3e; 0) {
+		format.<span class="apidocCodeKeywordSpan">render</span>(data, options, function (err, output) {
+			if (err) {
+				console.error(err);
+				process.exit(1);
+			}
+			console.log(output);
+		});
+	}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nlf.nlf" id="apidoc.module.nlf.nlf">module nlf.nlf</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.nlf.FileSource" id="apidoc.element.nlf.nlf.FileSource">
+        function <span class="apidocSignatureSpan">nlf.nlf.</span>FileSource
+        <span class="apidocSignatureSpan">(filePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileSource(filePath) {
+
+	if (typeof filePath !== &#x27;string&#x27;) {
+		throw new Error(&#x27;filePath must be a string&#x27;);
+	}
+
+	this.filePath = filePath;
+	this.text = &#x27;&#x27;;
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.nlf.LicenseCollection" id="apidoc.element.nlf.nlf.LicenseCollection">
+        function <span class="apidocSignatureSpan">nlf.nlf.</span>LicenseCollection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LicenseCollection() {
+
+	this.sources = [];
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.nlf.Module" id="apidoc.element.nlf.nlf.Module">
+        function <span class="apidocSignatureSpan">nlf.nlf.</span>Module
+        <span class="apidocSignatureSpan">(id, name, version, directory, repository, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Module(id, name, version, directory, repository, type) {
+
+	if (!id) {
+		throw new Error(&#x27;id must be defined&#x27;);
+	}
+
+	if (!directory) {
+		throw new Error(&#x27;directory must be defined&#x27;);
+	}
+
+	this.id = id;
+	this.name = name;
+	this.version = version;
+	this.repository = (repository || &#x27;(none)&#x27;)
+		.replace(&#x27;git://&#x27;, &#x27;http://&#x27;)
+		.replace(&#x27;.git&#x27;, &#x27;&#x27;)
+		.replace(/^git\+/, &#x27;&#x27;);
+	this.directory = directory;
+	this.type = type || &#x27;(none)&#x27;;
+
+	this.licenseSources = {
+		&#x27;package&#x27;: new LicenseCollection(),
+		&#x27;license&#x27;: new LicenseCollection(),
+		&#x27;readme&#x27;: new LicenseCollection()
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.nlf.PackageSource" id="apidoc.element.nlf.nlf.PackageSource">
+        function <span class="apidocSignatureSpan">nlf.nlf.</span>PackageSource
+        <span class="apidocSignatureSpan">(licenseProperty)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PackageSource(licenseProperty) {
+
+	switch (typeof licenseProperty) {
+	case &#x27;string&#x27;:
+		this.license = licenseProperty;
+		this.url = &#x27;(none)&#x27;;
+		break;
+	case &#x27;object&#x27;:
+		this.license = licenseProperty.type;
+		this.url = licenseProperty.url;
+		break;
+	default:
+		throw new Error(&#x27;licenseProperty must be a string or an object&#x27;);
+	}
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.nlf.find" id="apidoc.element.nlf.nlf.find">
+        function <span class="apidocSignatureSpan">nlf.nlf.</span>find
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function find(options, callback) {
+
+	// process arguments
+	if (typeof options === &#x27;function&#x27; &#x26;&#x26; callback === undefined) {
+		callback = options;
+		options = undefined;
+	}
+
+	try {
+		options = processOptions(options);
+	} catch (err) {
+		return callback(err);
+	}
+
+	<span class="apidocCodeCommentSpan">/**
+	 * Function called when readInstalled hits an issue
+	 *
+	 * @param  {String} output The error message
+	 * @param  {String} details The error details
+	 */
+</span>	function log(output, details) {
+		console.error(&#x27;Error in reading node_module dependencies, error was:&#x27;,
+			output, details);
+	}
+
+	if (!fileExistsSync(path.join(options.directory, &#x27;package.json&#x27;))) {
+		return callback(new Error(&#x27;No package.json file found.&#x27;));
+	}
+
+	// use npm read-installed module to search out all the node modules
+	readInstalled(options.directory, {
+		log: log,
+		depth: options.depth
+	}, function (err, data) {
+
+		if (err) {
+			console.error(&#x27;Serious problem reading node_module dependencies&#x27;);
+			return callback(err);
+		}
+
+		// parse the read-installed data
+		parseInstalled(data, options, function (err, output) {
+
+			if (err) {
+				return callback(err);
+			}
+
+			// return the output
+			callback(null, convertToArray(output));
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Programmatically
+
+```javascript
+var nlf = require(&#x27;nlf&#x27;);
+
+nlf.<span class="apidocCodeKeywordSpan">find</span>({ directory: &#x27;/User/me/my-project&#x27; }, function (err, data) {
+	// do something with the response object.
+	console.log(JSON.stringify(data));
+});
+
+// to only include production dependencies
+nlf.find({
+	directory: &#x27;/User/me/my-project&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.nlf.licenseFind" id="apidoc.element.nlf.nlf.licenseFind">
+        function <span class="apidocSignatureSpan">nlf.nlf.</span>licenseFind
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identifyLicense(text) {
+	var licenseIndex,
+		regexIndex,
+		pattern,
+		output = [];
+
+	// ignore files that have the ignore flag - e.g. the nfl project itself
+	if (!excludePattern.test(text)) {
+		for (licenseIndex = patterns.length - 1; licenseIndex &#x3e;= 0; licenseIndex--) {
+			pattern = patterns[licenseIndex];
+			for (regexIndex = pattern.regex.length - 1; regexIndex &#x3e;= 0; regexIndex--) {
+				if (pattern.regex[regexIndex].test(text)) {
+					output.push(pattern.name);
+					break;
+				}
+			}
+		}
+	}
+
+	return output.sort();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nlf.standardFormatter" id="apidoc.module.nlf.standardFormatter">module nlf.standardFormatter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nlf.standardFormatter.render" id="apidoc.element.nlf.standardFormatter.render">
+        function <span class="apidocSignatureSpan">nlf.standardFormatter.</span>render
+        <span class="apidocSignatureSpan">(licenseData, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function render(licenseData, options, callback) {
+
+	if (typeof callback !== &#x27;function&#x27;) {
+		throw new Error(&#x27;must have a callback&#x27;);
+	}
+
+	if (!Array.isArray(licenseData)) {
+		return callback(new Error(&#x27;licenseData must be an array&#x27;));
+	}
+
+	if (licenseData.length &#x3c; 1) {
+		return callback(new Error(&#x27;must have at least one module in data&#x27;));
+	}
+
+	var output = [];
+	var summary = {};
+
+	// go through all the modules, adding them to
+	// the output archy formatted data
+	licenseData.forEach(function (module) {
+		output.push(createModuleNode(module));
+		// add new licenses to the summary
+		var moduleLicenses = module.summary();
+		for (var index = 0; index &#x3c; moduleLicenses.length; index++) {
+			var license = moduleLicenses[index];
+			if (!summary[license]) {
+				summary[license] = [];
+			}
+			summary[license].push(module.id);
+		}
+	});
+
+	// add the summary
+	switch (options.summaryMode) {
+		case &#x27;simple&#x27;:
+			output.push(createSummary(summary));
+			break;
+		case &#x27;detail&#x27;:
+			output.push(modulesByLicenses(summary));
+			break;
+	}
+
+	callback(null, output.join(&#x27;\n&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	if (err) {
+		console.error(err);
+		process.exit(1);
+	}
+
+	if (data &#x26;&#x26; data.length &#x3e; 0) {
+		format.<span class="apidocCodeKeywordSpan">render</span>(data, options, function (err, output) {
+			if (err) {
+				console.error(err);
+				process.exit(1);
+			}
+			console.log(output);
+		});
+	}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
